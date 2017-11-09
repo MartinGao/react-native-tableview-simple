@@ -49,6 +49,7 @@ class Section extends Component {
       section: [
         styles.section,
         {
+          display: this.props.hidden ? 'none' : 'flex',
           backgroundColor: sectionTintColor,
           paddingBottom: sectionPaddingBottom,
           paddingTop: sectionPaddingTop,
@@ -203,6 +204,7 @@ Section.propTypes = {
   separatorInsetLeft: PropTypes.number,
   separatorInsetRight: PropTypes.number,
   separatorTintColor: PropTypes.string,
+  hidden: PropTypes.bool,
 };
 
 Section.defaultProps = {
@@ -221,6 +223,7 @@ Section.defaultProps = {
   separatorInsetLeft: 15,
   separatorInsetRight: 0,
   separatorTintColor: '#C8C7CC',
+  hidden: false,
 };
 
 export default Section;
